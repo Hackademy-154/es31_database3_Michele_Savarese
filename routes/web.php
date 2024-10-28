@@ -19,3 +19,4 @@ Route::get('/author/create', [AuthorController::class, 'create'])->name('author.
 Route::post('/author/store', [AuthorController::class,'store'])->name('author.store');
 
 Route::get('/author/index', [AuthorController::class,'index'])->name('author.index');
+Route::get('/author/detail/{author}', [AuthorController::class,'show'])->name('author.show');

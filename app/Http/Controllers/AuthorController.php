@@ -12,7 +12,7 @@ class AuthorController extends Controller
      */
     public function index()
     {
-        $authors = Author::orderBy('created_at','desc')->get();
+        $authors = Author::orderBy('created_at', 'desc')->get();
         return view('author.index', compact('authors'));
         //
     }
@@ -32,11 +32,11 @@ class AuthorController extends Controller
     public function store(Request $request)
     {
         Author::create([
-            'name'=>$request->name,
-            'bio'=>$request->bio,
-            'pic'=> $request->has('pic')? $request->file('pic')->store('pics','public'): null,
+            'name' => $request->name,
+            'bio' => $request->bio,
+            'pic' => $request->has('pic') ? $request->file('pic')->store('pics', 'public') : null,
         ]);
-return redirect()->route('author.create')->with('success','Autore Creato');
+        return redirect()->route('author.create')->with('success', 'Autore Creato');
         //
     }
 
@@ -45,6 +45,10 @@ return redirect()->route('author.create')->with('success','Autore Creato');
      */
     public function show(Author $author)
     {
+        // return view(view: 'author.show', compact('author'));
+        return view('author.show', compact('author'));
+
+
         //
     }
 

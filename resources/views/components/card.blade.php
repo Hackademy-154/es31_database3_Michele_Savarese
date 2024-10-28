@@ -6,6 +6,6 @@
         <p class="card-text">{{ $boardgame->type }}</p>
         <p class="card-text">{{ $boardgame->players }}</p>
         <p class="card-text">{{ $boardgame->instructor }}</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        {{-- <a href="{{route('boardgame.show') }}" class="btn btn-primary">Go somewhere</a> --}}
     </div>
 </div>

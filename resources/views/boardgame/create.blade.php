@@ -60,7 +60,7 @@
                         @enderror
                     </div>
                     <div class="mb-3">
-                        <label for="box" class="form-label  @error('box') is-invalid @enderror"">Immagine:</label>
+                        <label for="box" class="form-label  @error('box') is-invalid @enderror">Immagine:</label>
                         <input class="form-control" type="file" name="box">
                         @error('box')
                             <div class="alert alert-danger">{{ $message }}</div>
