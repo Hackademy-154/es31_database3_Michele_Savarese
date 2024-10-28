@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class BoardGame extends Model
+class Game extends Model
 {
     use HasFactory;
     protected $fillable = [
@@ -13,13 +13,13 @@ class BoardGame extends Model
         'type',
         'players',
         'instructor',
-        'box'
+        'imgbox'
     ];
+
     //! fillable, array che contiene le caratteristiche del modello
     // public $name;
     // public $type;
     // public $players;
     // public $instructor;
-
     //
 }

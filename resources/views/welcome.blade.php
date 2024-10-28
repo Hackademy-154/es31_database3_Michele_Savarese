@@ -10,12 +10,12 @@
         </div>
 
         <div class="row justify-content-center">
-            {{-- @dd($boardgames) --}}
-            {{-- @foreach ($boardgames as $boardgame)
+            {{-- @dd($ciccio) --}}
+            @foreach ($boardgames as $boardgame)
                 <div class="col-12 col-md-4">
                     <x-card :boardgame="$boardgame" />
                 </div>
-            @endforeach --}}
+            @endforeach
         </div>
     </div>
     {{-- <header class="bg-black vh-100">
