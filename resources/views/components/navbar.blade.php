@@ -14,9 +14,9 @@
                 {{-- <li class="nav-item">
                     <a class="nav-link" href="#">Features</a>
                 </li> --}}
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a class="nav-link" href="{{ route('boardgame.create') }}">Inserisci un gioco</a>
-                </li>
+                </li> --}}
                 @auth
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -28,13 +28,12 @@
                         <li><a class="dropdown-item" href="#">Another action</a></li>
                         <li><a class="dropdown-item" href="#">Something else here</a></li> --}}
 
-
                             <form action="{{route('logout')}}" method="POST">
                                 @csrf
                                 <button class="dropdown-item" type="submit">Logout</button>
                             </form>
-
-
+                            <li><a class="dropdown-item" href="{{ route('boardgame.create') }}">Inserisci un gioco</a></li>
+                            <li><a class="dropdown-item" href="{{ route('author.create') }}">Inserisci un autore</a></li>
 
                         </ul>
 

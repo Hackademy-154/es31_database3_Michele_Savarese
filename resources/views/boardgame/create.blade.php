@@ -36,7 +36,7 @@
                         @enderror
                     </div>
                     <div class="mb-3">
-                        <label for="type" class="form-label  @error('type') is-invalid @enderror"">Tipo di
+                        <label for="type" class="form-label  @error('type') is-invalid @enderror">Tipo di
                             gioco:</label>
                         <input value="{{ old('type') }}" class="form-control" type="text" name="type">
                         @error('type')
@@ -44,7 +44,7 @@
                         @enderror
                     </div>
                     <div class="mb-3">
-                        <label for="players" class="form-label  @error('players') is-invalid @enderror"">Numero di
+                        <label for="players" class="form-label  @error('players') is-invalid @enderror">Numero di
                             giocatori:</label>
                         <input value="{{ old('players') }}" class="form-control" type="number" name="players">
                         @error('players')
@@ -53,7 +53,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="instructor"
-                            class="form-label  @error('instructor') is-invalid @enderror"">Istruttore:</label>
+                            class="form-label  @error('instructor') is-invalid @enderror">Istruttore:</label>
                         <input value="{{ old('instructor') }}" class="form-control" type="text" name="instructor">
                         @error('instructor')
                             <div class="alert alert-danger">{{ $message }}</div>
