@@ -30,9 +30,8 @@
                     <div class="mb-3">
                         <label for="bio" class="form-label  @error('bio') is-invalid @enderror">Biografia:</label>
                         <textarea name="bio" id="bio" cols="30" rows="10"
-                            class="form-control @error('bio') is-invalid
+                            class="form-control @error('bio') is-invalid @enderror">{{ old('bio') }}</textarea>
 
-@enderror">{{ old('bio') }}</textarea>
 
                         {{-- <textarea class="form-control" type="text" name="bio">{{ old('bio') }}</textarea> --}}
 

@@ -23,3 +23,4 @@ Route::get('/author/detail/{author}', [AuthorController::class, 'show'])->name('
 
 Route::get('/author/edit/{author}', [AuthorController::class, 'edit'])->name('author.edit');
 Route::put('/author/update/{author}', [AuthorController::class, 'update'])->name('author.update');
+Route::delete('/author/delete/{author}', [AuthorController::class,'destroy'])->name('author.destroy');

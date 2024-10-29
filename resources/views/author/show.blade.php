@@ -4,7 +4,7 @@
         <div class="row align-items-center justify-content-center">
             <div class="col-12">
                 <h1 class="text-center display-4 text-shadow">
-                    Dettaglio Autore <span class="fts-italic">{{$author->name}}</span> </h1>
+                    Dettaglio Autore <span class="fts-italic">{{ $author->name }}</span> </h1>
             </div>
         </div>
 
@@ -35,9 +35,24 @@
 
                 {{-- <a class="btn btn-warning" href="{{route('autor.edit',['author'=>$author]) }}">Modifica</a> --}}
 
-                <a class="btn btn-warning" href="{{route('author.edit', compact('author')) }}">Modifica</a>
+                <a class="btn btn-warning" href="{{ route('author.edit', compact('author')) }}">Modifica</a>
 
             </div>
+
+            <div class="col-12">
+
+                {{-- <a class="btn btn-warning" href="{{route('autor.edit',['author'=>$author]) }}">Modifica</a> --}}
+
+                <form method="POST" action="{{ route('author.destroy', compact('author')) }}">
+                    @csrf
+                    @method('DELETE')
+                    <button class="btn btn-danger">
+                        Rimuovi Autore
+                    </button>
+
+                </form>
+            </div>
+
         </div>
 
 

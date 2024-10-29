@@ -28,11 +28,11 @@
                         @enderror
                     </div>
 
-                    <div class="mb-3">
-                        <label for="bio" class="form-label  @error('bio') is-invalid @enderror">Biografia:</label>
+                    <label for="bio" class="form-label  @error('bio') is-invalid @enderror">Biografia:</label>
                         <textarea name="bio" id="bio" cols="30" rows="10"
                             class="form-control @error('bio') is-invalid @enderror">
-                         </textarea>
+                            {{ $author->bio}}
+                        </textarea>
 
                         @error('bio')
                             <div class="alert alert-danger">{{ $message }}</div>

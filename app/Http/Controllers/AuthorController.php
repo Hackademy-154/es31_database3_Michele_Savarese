@@ -92,6 +92,8 @@ class AuthorController extends Controller
      */
     public function destroy(Author $author)
     {
+        $author->delete();
+        return redirect()->route('author.index')->with('success', "Autore $author->name rimosso");
         //
     }
 }
