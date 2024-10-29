@@ -19,6 +19,7 @@
                         <p class="card-text">{{ $author->bio }}</p>
                         {{-- <a href="{{ route('author.show', compact('author')) }}" class="btn btn-primary">Visualizza
                             scheda</a> --}}
+
                     </div>
                 </div>
 
@@ -28,6 +29,20 @@
             </div>
             {{-- @endforeach --}}
         </div>
+
+        <div class="row text-center">
+            <div class="col-12">
+
+                {{-- <a class="btn btn-warning" href="{{route('autor.edit',['author'=>$author]) }}">Modifica</a> --}}
+
+                <a class="btn btn-warning" href="{{route('author.edit', compact('author')) }}">Modifica</a>
+
+            </div>
+        </div>
+
+
+
+
     </div>
     {{-- <header class="bg-black vh-100">
     </header> --}}

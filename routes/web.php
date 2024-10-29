@@ -16,7 +16,10 @@ Route::post('/boardgame/library', [GameController::class, 'library'])->name('boa
 
 
 Route::get('/author/create', [AuthorController::class, 'create'])->name('author.create');
-Route::post('/author/store', [AuthorController::class,'store'])->name('author.store');
+Route::post('/author/store', [AuthorController::class, 'store'])->name('author.store');
 
-Route::get('/author/index', [AuthorController::class,'index'])->name('author.index');
-Route::get('/author/detail/{author}', [AuthorController::class,'show'])->name('author.show');
+Route::get('/author/index', [AuthorController::class, 'index'])->name('author.index');
+Route::get('/author/detail/{author}', [AuthorController::class, 'show'])->name('author.show');
+
+Route::get('/author/edit/{author}', [AuthorController::class, 'edit'])->name('author.edit');
+Route::put('/author/update/{author}', [AuthorController::class, 'update'])->name('author.update');

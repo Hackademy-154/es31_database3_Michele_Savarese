@@ -57,6 +57,7 @@ class AuthorController extends Controller
      */
     public function edit(Author $author)
     {
+        return view('author.edit', compact('author'));
         //
     }
 
@@ -65,6 +66,24 @@ class AuthorController extends Controller
      */
     public function update(Request $request, Author $author)
     {
+        // dd($author, $request->all());
+        if ($request->pic) {
+            $author->update([
+                'pic' => $request->file('pic')->store('pics', 'public')
+            ]);
+        }
+
+
+
+        $author->update([
+            'name' => $request->name,
+            'bio' => $request->bio,
+
+            // 'pic'=>$request->has('pic')?$request->file('pic')->store('pics', 'public'): null,
+        ]);
+        return redirect()->route('author.edit', compact('author'))->with('success', 'Autore modificato');
+
+
         //
     }
 
